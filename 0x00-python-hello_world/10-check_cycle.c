@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * check_cycle - Entry point
  * Description: check cycle
