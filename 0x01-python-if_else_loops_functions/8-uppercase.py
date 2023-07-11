@@ -2,7 +2,7 @@
 def uppercase(str):
     for let in str:
         if ord(let) >= ord('a') and ord(let) <= ord('z'):
-            c = ord(let) - ord('a') + ord('A')
+            c = chr(ord(let) - ord('a') + ord('A'))
         else:
             c = let
         print("{alpha}".format(alpha=c), end='')
