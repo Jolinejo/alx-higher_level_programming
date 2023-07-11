@@ -7,7 +7,6 @@
  */
 int check_cycle(listint_t *list)
 {
-	int passed = 0;
 	listint_t *normal = list;
 	listint_t *skip = list;
 
