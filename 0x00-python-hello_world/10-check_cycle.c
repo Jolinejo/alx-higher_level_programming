@@ -8,8 +8,11 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *normal = list;
-	listint_t *skip = list->next;
+	listint_t *skip;
 
+	if (list == NULL)
+		return (0);
+	skip = list->next;
 	while (skip != NULL && skip->next != NULL)
 	{
 		if (skip == normal)
