@@ -8,17 +8,15 @@
 int check_cycle(listint_t *list)
 {
 	int passed = 0;
-	listint_t *current;
-	listint_t *head = list;
+	listint_t *normal = list;
+	listint_t *skip = list;
 
-	current = list;
-	while (current != NULL)
+	while (skip != NULL && skip->next != NULL)
 	{
-		if (passed == 0 && current == head)
-			passed = 1;
-		else if (passed == 1 && current == head)
+		if (skip == normal)
 			return (1);
-		current = current->next;
+		normal = normal->next;
+		skip = skip->next->next;
 	}
 	return (0);
 }
