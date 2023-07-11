@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * insert_node - Entry point
  * Description: insert sorted
