@@ -18,7 +18,7 @@ int check_cycle(listint_t *list)
 			passed = 1;
 		else if (passed == 1 && current == head)
 			return (1);
-		current == current->next;
+		current = current->next;
 	}
 	return (0);
 }
