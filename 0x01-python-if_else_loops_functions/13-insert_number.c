@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * insert_node - Entry point
  * Description: insert sorted
