@@ -12,5 +12,6 @@ def main():
     for i in range(1, n):
         print("{i}: {arg}".format(i=i, arg=sys.argv[i]))
 
+
 if __name__ == "__main__":
     main()
