@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "usr/include/python3.8/Python.h"
-#include <object.h>
-#include <listobject.h>
+#include "/usr/include/python3.4/object.h"
+#include "/usr/include/python3.4/listobject.h"
+#include <unistd.h>
+#include <stdlib.h>
 
 /**
  * print_python_list_info - Entry point
@@ -14,8 +15,8 @@ void print_python_list_info(PyObject *list)
 	int i = 0;
 
 	forced = (PyListObject *)list;
-	printf("[*] Size of the Python List = %ld\n", forced->ob_base.ob_size);
-	printf("[*] Allocated = %ld\n", forced->allocated);
+	printf("[*] Size of the Python List = %d\n", forced->ob_base.ob_size);
+	printf("[*] Allocated = %d\n", forced->allocated);
 	for (; i < forced->ob_base.ob_size; i++)
 	{
 		printf("Element %d: %s\n", i, forced->ob_item[i]->ob_type->tp_name);
