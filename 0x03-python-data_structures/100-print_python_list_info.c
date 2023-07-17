@@ -14,10 +14,10 @@ void print_python_list_info(PyObject *list)
 	int i = 0;
 
 	forced = (PyListObject *)list;
-	printf("[*] Size of the Python List = %d\n", forced->ob_base.ob_size);
+	printf("[*] Size of the Python List = %d\n",Py_SIZE(forced));
 	printf("[*] Allocated = %d\n", forced->allocated);
-	for (; i < forced->ob_base.ob_size; i++)
+	for (; i < Py_SIZE(forced); i++)
 	{
-		printf("Element %d: %s\n", i, forced->ob_item[i]->ob_type->tp_name);
+		printf("Element %d: %s\n", i, Py_TYPE(forced->ob_item[i])->ob_type->tp_name);
 	}
 }
