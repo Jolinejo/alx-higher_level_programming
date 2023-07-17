@@ -10,7 +10,7 @@
  */
 int check(const int len, listint_t **head)
 {
-	int numbers[700];
+	int numbers[2000];
 	int i = 0;
 	listint_t *curr = *head;
 
