@@ -14,7 +14,7 @@ int check(const int len, listint_t **head)
 	int i = 0;
 	listint_t *curr = *head;
 
-	for (i; i < len; i++)
+	for (; i < len; i++)
 	{
 		numbers[i] = curr->n;
 		curr = curr->next;
@@ -35,7 +35,6 @@ int check(const int len, listint_t **head)
 int is_palindrome(listint_t **head)
 {
 	int len = 0;
-	int i, j;
 	listint_t *curr;
 	listint_t *nex;
 
