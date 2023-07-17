@@ -2,6 +2,7 @@
 #include <Python.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "listobject.h"
 
 /**
  * print_python_list_info - Entry point
