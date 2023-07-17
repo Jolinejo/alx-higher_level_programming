@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include "Python.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include "object.h"
 #include "listobject.h"
-
 /**
  * print_python_list_info - Entry point
  * @list: list
