@@ -10,7 +10,7 @@
  */
 int check(const int len, listint_t **head)
 {
-	int numbers[len];
+	int numbers[700];
 	int i = 0;
 	listint_t *curr = *head;
 
@@ -48,7 +48,5 @@ int is_palindrome(listint_t **head)
 		len++;
 	}
 	len++;
-	if (nex->n != curr->n)
-		return (0);
 	return (check(len, head));
 }
