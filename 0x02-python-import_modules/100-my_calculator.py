@@ -8,17 +8,18 @@ def main():
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
+    op = sys.argv[2]
     if not sys.argv[2] in "+*-/":
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     if sys.argv[2] == '+':
-        print("{a} {op} {b} = {re}".format(a=a, b=b, op=sys.argv[2], re=calc.add(a, b)))
+        print("{a} {op} {b} = {re}".format(a=a, b=b, op=op, re=calc.add(a, b)))
     elif sys.argv[2] == '-':
-        print("{a} {op} {b} = {re}".format(a=a, b=b, op=sys.argv[2], re=calc.sub(a, b)))
+        print("{a} {op} {b} = {re}".format(a=a, b=b, op=op, re=calc.sub(a, b)))
     elif sys.argv[2] == '*':
-        print("{a} {op} {b} = {re}".format(a=a, b=b, op=sys.argv[2], re=calc.mul(a, b)))
+        print("{a} {op} {b} = {re}".format(a=a, b=b, op=op, re=calc.mul(a, b)))
     if sys.argv[2] == '/':
-        print("{a} {op} {b} = {re}".format(a=a, b=b, op=sys.argv[2], re=calc.div(a, b)))
+        print("{a} {op} {b} = {re}".format(a=a, b=b, op=op, re=calc.div(a, b)))
 
 
 if __name__ == "__main__":
