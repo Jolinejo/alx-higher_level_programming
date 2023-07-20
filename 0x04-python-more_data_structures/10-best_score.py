@@ -2,7 +2,7 @@
 def best_score(a_dictionary):
     maxn = 0
     best_k = None
-    if len(a_dictionary) == 0:
+    a_dictionary == None:
         return None
     for key in a_dictionary:
         if a_dictionary[key] > maxn:
