@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def multiply_by_2(a_dictionary):
+def best_score(a_dictionary):
     maxn = 0
     best_k = None
     if len(a_dictionary) == 0:
