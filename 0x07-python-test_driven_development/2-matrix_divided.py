@@ -23,6 +23,8 @@ def matrix_divided(matrix, div):
         if div == 0:
             raise ZeroDivisionError("division by zero")
         return []
+    if type(matrix) != list:
+        raise TypeError(m)
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError(m)
