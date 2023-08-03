@@ -6,7 +6,18 @@ The function takes a matrix and a number to divide by.
 
 The matrix should include only numbers.
 """
+
+
 def matrix_divided(matrix, div):
+    """Function for dividing a matrix
+
+    Args:
+        matrix(list of lists): only contains int,float
+        div(int, float): divisor
+
+    Returns:
+        A new divided matrix.
+    """
     m = "matrix must be a matrix (list of lists) of integers/floats"
     if matrix == []:
         if div == 0:
@@ -26,4 +37,4 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    return list(map(lambda x: list(map(lambda i: round(i/div, 2), x)),matrix))
+    return list(map(lambda x: list(map(lambda i: round(i/div, 2), x)), matrix))

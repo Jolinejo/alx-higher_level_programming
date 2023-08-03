@@ -6,6 +6,8 @@ but floats are first convirted to ints
 
 the result value is an int.
 """
+
+
 def add_integer(a, b=98):
     """Addition func.
 
