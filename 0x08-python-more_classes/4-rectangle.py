@@ -112,5 +112,5 @@ class Rectangle:
 
     def __repr__(self):
         """formal representation"""
-        rep = 'Rectangle(' + str(self.__width) + ', ' + str(self.__height) + ')'
-        return rep
+        re = 'Rectangle(' + str(self.__width) + ', ' + str(self.__height) + ')'
+        return re
