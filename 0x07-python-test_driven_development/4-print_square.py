@@ -5,6 +5,7 @@ Print_square is a fuction that prints a square and takes a size.
 The size must be an int or else raise TypeError.
 """
 
+
 def print_square(size):
     """A function that prints a square.
 

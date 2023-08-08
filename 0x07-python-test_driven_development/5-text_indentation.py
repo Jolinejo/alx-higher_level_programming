@@ -5,6 +5,8 @@ The function takes a string and splits it
 
 splitting happens at : . and ?
 """
+
+
 def text_indentation(text):
     """A function for printing the string splitted.
 
@@ -38,5 +40,5 @@ def text_indentation(text):
             if line[i-1] != " ":
                 _end = i
                 break
-        if start != None:
+        if start is not None:
             print("{}".format(line[start: _end]), end='')
