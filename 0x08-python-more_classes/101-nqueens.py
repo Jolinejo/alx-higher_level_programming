@@ -2,6 +2,9 @@
 """A module that contains n queens solver program.
 
 """
+import sys
+
+
 def solve(n):
     """solver func.
 
@@ -13,6 +16,7 @@ def solve(n):
     negDiag = set()
 
     alxAns = []
+
     def backtrack(r):
         if r == n:
             print(alxAns)
@@ -34,14 +38,14 @@ def solve(n):
             alxAns.remove([r, c])
     backtrack(0)
 
-import sys
+
 n = len(sys.argv)
 if n != 2:
     print("Usage: nqueens N")
     exit(1)
 try:
     int(sys.argv[1])
-except:
+except ValueError:
     print("N must be a number")
     exit(1)
 if int(sys.argv[1]) < 4:
