@@ -30,3 +30,11 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
+>>> print(add_integer(float('inf'), 9))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> print(add_integer(9, -float('inf')))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
