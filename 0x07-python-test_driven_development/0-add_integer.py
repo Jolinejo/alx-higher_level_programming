@@ -24,12 +24,12 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if type(b) not in [int, float]:
         raise TypeError("b must be an integer")
-    try int(a):
-        a = int(a)
+    try:
+        int(a)
     except ValueError: 
         raise TypeError("a must be an integer")
-    try int(b):
-        b = int(b)
+    try:
+        int(b)
     except ValueError:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
