@@ -50,3 +50,20 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+>>> add_integer(0, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(5, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(-float('inf'), 5)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(5, -float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
