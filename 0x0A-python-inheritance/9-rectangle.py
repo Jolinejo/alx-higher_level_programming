@@ -25,7 +25,7 @@ class Rectangle(BaseGeometry):
             height (int): The height from the user.
         """
         self.integer_validator("width", width)
-        self.__wdith = width
+        self.__width = width
         self.integer_validator("height", height)
         self.__height = height
 
@@ -36,4 +36,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """str represintation"""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        s = "[Rectangle] "
+        s += str(self.__width) + "/" + str(self.__height)
+        return s
