@@ -2,6 +2,7 @@
 """A module that contains the definition for an empty class
 """
 
+
 class BaseGeometry:
     """An empty class the defines BaseGeometry.
     """
@@ -41,4 +42,3 @@ class Rectangle(BaseGeometry):
         self.__width = width
         BaseGeometry.integer_validator(self, "height", height)
         self.__height = height
-
