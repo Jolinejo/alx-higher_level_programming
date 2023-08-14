@@ -7,6 +7,12 @@ Using "my_list"
 >>> d = __import__("1-my_list").__doc__
 >>> len(d) > 0
 True
+>>> d = __import__("1-my_list").MyList.__doc__
+>>> len(d) > 0
+True
+>>> d = __import__("1-my_list").MyList.print_sorted.__doc__
+>>> len(d) > 0
+True
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
