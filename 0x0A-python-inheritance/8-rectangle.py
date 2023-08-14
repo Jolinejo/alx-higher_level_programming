@@ -38,7 +38,7 @@ class Rectangle(BaseGeometry):
             width (int): The width from the user.
             height (int): The height from the user.
         """
-        BaseGeometry.integer_validator(self, "width", width)
-        BaseGeometry.integer_validator(self, "height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
