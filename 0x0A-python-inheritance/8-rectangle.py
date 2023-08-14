@@ -29,7 +29,7 @@ class Rectangle(BaseGeometry):
         __width: Private attribute width.
         __height: Private attribute height.
     """
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         """Constructor function.
 
         Note: raise exceptions if size is not int.
@@ -39,6 +39,6 @@ class Rectangle(BaseGeometry):
             height (int): The height from the user.
         """
         self.integer_validator("width", width)
+        self.__wdith = width
         self.integer_validator("height", height)
-        self.__width = width
         self.__height = height
