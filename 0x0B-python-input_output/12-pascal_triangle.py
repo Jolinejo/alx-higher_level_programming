@@ -11,7 +11,7 @@ def pascal_triangle(n):
         n(int): number of line
     """
     if n <= 0:
-        return [[]]
+        return []
 
     final = []
     final.append([1])
