@@ -10,7 +10,7 @@ def pascal_triangle(n):
     Args:
         n(int): number of line
     """
-    if n == 0:
+    if n <= 0:
         return [[]]
 
     final = []
