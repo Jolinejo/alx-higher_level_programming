@@ -4,7 +4,7 @@
 import json
 
 
-def from_json_string(my_str):    
+def from_json_string(my_str):
     """Func to read files
 
     Args:
