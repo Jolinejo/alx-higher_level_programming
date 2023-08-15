@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """a module that has a function"""
 
+import json
+
 
 def to_json_string(my_obj):
     """Func to read files
