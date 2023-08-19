@@ -107,7 +107,11 @@ class Rectangle(Base):
 
         Note: if __size is 0 print an empty line.
         """
+        for v in range(self.__y):
+            print("")
         for i in range(1, self.__height+1):
+            for k in range(self.__x):
+                print(" ", end='')
             for j in range(0, self.__width):
                 print("#", end='')
             print("")
