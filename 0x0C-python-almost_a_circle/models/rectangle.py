@@ -116,7 +116,7 @@ class Rectangle(Base):
                 print("#", end='')
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updating using args"""
         atrr_lis = ["id",
                     "_Rectangle__width", "_Rectangle__height",
@@ -128,6 +128,9 @@ class Rectangle(Base):
                     break
             setattr(self, atrr_lis[i], arg)
             i += 1
+        if i == 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         """str represintation"""
