@@ -101,3 +101,13 @@ class Rectangle(Base):
         """return rec area"""
         ar = self.__width * self.__height
         return ar
+
+    def display(self):
+        """prints the square.
+
+        Note: if __size is 0 print an empty line.
+        """
+        for i in range(1, self.__height+1):
+            for j in range(0, self.__width):
+                print("#", end='')
+            print("")
