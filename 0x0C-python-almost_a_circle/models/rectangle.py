@@ -111,3 +111,11 @@ class Rectangle(Base):
             for j in range(0, self.__width):
                 print("#", end='')
             print("")
+
+    def __str__(self):
+        """str represintation"""
+        s = "[Rectangle] ("
+        s += str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
+        s += " - "
+        s += str(self.__width) + "/" + str(self.__height)
+        return s
