@@ -73,7 +73,7 @@ class Rectangle(Base):
     def x(self):
         """getter for x"""
         return self.__x
-    
+
     @x.setter
     def x(self, val):
         """setter for x"""
@@ -87,7 +87,7 @@ class Rectangle(Base):
     def y(self):
         """getter for y"""
         return self.__y
-    
+
     @y.setter
     def y(self, val):
         """setter for y"""
@@ -125,16 +125,21 @@ class Rectangle(Base):
         i = 0
         for arg in args:
             if i == len(atrr_lis):
-                    break
+                break
             setattr(self, atrr_lis[i], arg)
             i += 1
         if i == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """dict rep"""
+        return {'x': self.__x, 'y': self.__y,
+                'id': self.id, 'height': self.__height, 'width': self.__width}
+
     def __str__(self):
         """str represintation"""
-        s = "[" + str(self.__class__.__name__) +"] ("
+        s = "[" + str(self.__class__.__name__) + "] ("
         s += str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
         s += " - "
         if str(self.__class__.__name__) == "Rectangle":
