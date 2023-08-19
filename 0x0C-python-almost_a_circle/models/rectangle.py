@@ -134,8 +134,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """str represintation"""
-        s = "[Rectangle] ("
+        s = "[" + str(self.__class__.__name__) +"] ("
         s += str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
         s += " - "
-        s += str(self.__width) + "/" + str(self.__height)
+        if str(self.__class__.__name__) == "Rectangle":
+            s += str(self.__width) + "/" + str(self.__height)
+        else:
+            s += str(self.__width)
         return s
