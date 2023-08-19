@@ -116,6 +116,19 @@ class Rectangle(Base):
                 print("#", end='')
             print("")
 
+    def update(self, *args):
+        """updating using args"""
+        atrr_lis = ["id",
+                    "_Rectangle__width", "_Rectangle__height",
+                    "_Rectangle__x", "_Rectangle__y"
+                    ]
+        i = 0
+        for arg in args:
+            if i == len(atrr_lis):
+                    break
+            setattr(self, atrr_lis[i], arg)
+            i += 1
+
     def __str__(self):
         """str represintation"""
         s = "[Rectangle] ("
