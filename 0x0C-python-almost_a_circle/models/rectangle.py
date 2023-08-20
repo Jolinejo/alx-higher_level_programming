@@ -130,7 +130,8 @@ class Rectangle(Base):
             i += 1
         if i == 0:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """dict rep"""

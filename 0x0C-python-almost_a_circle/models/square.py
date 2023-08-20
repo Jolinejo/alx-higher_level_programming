@@ -52,7 +52,7 @@ class Square(Rectangle):
                 if key == "size":
                     setattr(self, "width", value)
                     setattr(self, "height", value)
-                else:
+                elif hasattr(self, key):
                     setattr(self, key, value)
 
     def to_dictionary(self):
