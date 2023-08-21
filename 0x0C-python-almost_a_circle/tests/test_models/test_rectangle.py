@@ -175,3 +175,7 @@ class test_rectangle(unittest.TestCase):
             os.remove("Square.json")
         except Exception:
             pass
+
+
+if __name__ == '__main__':
+    unittest.main()
