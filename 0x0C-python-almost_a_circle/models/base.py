@@ -37,8 +37,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """save json rep to file"""
         list_dict = []
-        for inst in list_objs:
-            list_dict.append(inst.to_dictionary())
+        try:
+            for inst in list_objs:
+                list_dict.append(inst.to_dictionary())
+        except Exception:
+            pass
         data = cls.to_json_string(list_dict)
         filename = cls.__name__ + ".json"
         with open(filename, 'w+') as f:
