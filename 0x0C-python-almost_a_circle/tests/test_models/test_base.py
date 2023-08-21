@@ -53,6 +53,14 @@ class test_base(unittest.TestCase):
             list_dict = json.load(f)
         self.assertDictEqual(list_dict[0], r1.to_dictionary())
         self.assertDictEqual(list_dict[1], r2.to_dictionary())
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
 
     def test_FromJsonString(self):
         """check list of json rep"""
