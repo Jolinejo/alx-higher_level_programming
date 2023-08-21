@@ -79,3 +79,34 @@ class Base:
         for item in list_dict:
             list_inst.append(cls.create(**item))
         return list_inst
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """turtle python"""
+        import turtle
+        turtle.Turtle()
+
+        list_rec = ["DarkMagenta", "MediumPurple", "plum"]
+        list_sq = ["OrangeRed4", "tomato", "salmon"]
+
+        i = 0
+        for rect in list_rectangles:
+            turtle.fillcolor(list_rec[i])
+            turtle.begin_fill()
+            for j in range(2):
+                turtle.forward(rect.width)
+                turtle.right(90)
+                turtle.forward(rect.height)
+                turtle.right(90)
+            i += 1
+            turtle.end_fill()
+
+        i = 0
+        for squ in list_squares:
+            turtle.fillcolor(list_sq[i])
+            turtle.begin_fill()
+            for j in range(4):
+                turtle.forward(rect.width)
+                turtle.right(90)
+            i += 1
+            turtle.end_fill()
