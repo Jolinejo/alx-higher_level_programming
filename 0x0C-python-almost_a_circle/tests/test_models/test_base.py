@@ -103,6 +103,13 @@ class test_base(unittest.TestCase):
             self.assertEqual(str(list_squares_i[i]), str(list_squares_o[i]))
             self.assertNotEqual(list_squares_i[i], list_squares_o[i])
 
+    def test_loadfromFileError(self):
+        """a file doesn't exist"""
+        list_rectangles_o = Rectangle.load_from_file()
+        self.assertEqual(list_rectangles_o, [])
+        list_squares_o = Square.load_from_file()
+        self.assertEqual(list_squares_o, [])
+
     def tearDown(self):
         """tearDown to reset objects"""
         Base._Base__nb_objects = 0
