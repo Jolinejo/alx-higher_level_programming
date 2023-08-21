@@ -46,6 +46,23 @@ class test_base(unittest.TestCase):
         from_js_dict = json.loads(json_dictionary)
         self.assertTrue(type(json_dictionary) is str)
         self.assertDictEqual(from_js_dict[0], dictionary)
+        dictionary = s1.to_dictionary()
+        json_dictionary = Square.to_json_string([dictionary])
+        from_js_dict = json.loads(json_dictionary)
+        self.assertTrue(type(json_dictionary) is str)
+        self.assertDictEqual(from_js_dict[0], dictionary)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Rectangle.to_json_string([dictionary])
+        from_js_dict = json.loads(json_dictionary)
+        self.assertTrue(type(json_dictionary) is str)
+        json_dictionary2 = Rectangle.to_json_string([])
+        json_dictionary3 = Rectangle.to_json_string(None)
+        self.assertEqual(json_dictionary2, "[]")
+        self.assertEqual(json_dictionary3, "[]")
+        json_dictionary2 = Square.to_json_string([])
+        json_dictionary3 = Square.to_json_string(None)
+        self.assertEqual(json_dictionary2, "[]")
+        self.assertEqual(json_dictionary3, "[]")
 
     def test_SaveToFile(self):
         """file saving tests"""
