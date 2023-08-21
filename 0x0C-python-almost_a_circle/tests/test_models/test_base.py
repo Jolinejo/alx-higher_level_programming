@@ -83,6 +83,14 @@ class test_base(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertEqual(str(r1), str(r2))
         self.assertNotEqual(r1, r2)
+        s1 = Square(2, 1, 3)
+        s1_dict = s1.to_dictionary()
+        s2 = Square.create(**s1_dict)
+        self.assertEqual(str(s1), str(s2))
+        self.assertNotEqual(s1, s2)
+        r2 = Rectangle.create(width=4, height=4)
+        self.assertEqual(r2.y, 0)
+        self.assertEqual(r2.x, 0)
 
     def test_LoadFromFile(self):
         """test creating from file"""
