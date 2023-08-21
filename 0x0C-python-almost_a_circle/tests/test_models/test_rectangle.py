@@ -17,6 +17,10 @@ import sys
 class test_rectangle(unittest.TestCase):
     """class for testing the rectangle"""
 
+    def test_inhert(self):
+        """test inhertiance"""
+        self.assertTrue(isinstance(Rectangle(1, 2), Base))
+        
     def test_Instance(self):
         """testing the instance"""
         r1 = Rectangle(10, 2)
