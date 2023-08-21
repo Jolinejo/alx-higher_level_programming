@@ -106,7 +106,8 @@ class Base:
             turtle.fillcolor(list_sq[i])
             turtle.begin_fill()
             for j in range(4):
-                turtle.forward(rect.width)
+                turtle.forward(squ.width)
                 turtle.right(90)
             i += 1
             turtle.end_fill()
+        turtle.end()
