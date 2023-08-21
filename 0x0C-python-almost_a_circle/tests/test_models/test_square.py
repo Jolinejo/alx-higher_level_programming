@@ -132,6 +132,9 @@ class test_square(unittest.TestCase):
         s1str = "[Square] (89) 12/1 - 7"
         self.assertEqual(str(s1), s1str)
         self.assertFalse(hasattr(s1, "km"))
+        s1.update(5, 8, 9, 7, size=7, id=89, y=1, km=6)
+        s1str = "[Square] (5) 9/7 - 8"
+        self.assertEqual(str(s1), s1str)        
 
     def test_dict(self):
         """test to dict"""
