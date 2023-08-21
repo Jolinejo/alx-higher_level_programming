@@ -16,6 +16,49 @@ import sys
 
 class test_square(unittest.TestCase):
     """class for testing the square"""
+    def test_xywidthheight(self):
+        """testing inst"""
+        s1 = Square(10)
+        self.assertEqual(s1.width, 10)
+        self.assertEqual(s1.height, 10)
+        self.assertEqual(s1.y, 0)
+        self.assertEqual(s1.x, 0)
+        s1.width = 1
+        s1.height = 1
+        s1.x = 1
+        s1.y = 1
+        self.assertEqual(s1.width, 1)
+        self.assertEqual(s1.height, 1)
+        self.assertEqual(s1.x, 1)
+        self.assertEqual(s1.y, 1)
+        with self.assertRaises(TypeError):
+            s1.width = "10"
+        with self.assertRaises(TypeError):
+            s1.height = "10"
+        with self.assertRaises(TypeError):
+            s1.x = "10"
+        with self.assertRaises(TypeError):
+            s1.y = "10"
+        with self.assertRaises(ValueError):
+            s1.width = 0
+        with self.assertRaises(ValueError):
+            s1.height = 0
+        with self.assertRaises(ValueError):
+            s1.width = -1
+        with self.assertRaises(ValueError):
+            s1.height = -1
+        with self.assertRaises(ValueError):
+            s1.x = -1
+        with self.assertRaises(ValueError):
+            s1.y = -1
+        self.assertRaises(TypeError, Square, "10")
+        self.assertRaises(TypeError, Square, 1, "3")
+        self.assertRaises(TypeError, Square, 10, 2, "4")
+        self.assertRaises(ValueError, Square, 0)
+        self.assertRaises(ValueError, Square, -1)
+        self.assertRaises(ValueError, Square, 1, -1)
+        self.assertRaises(ValueError, Square, 1, 1, -1)
+
     def test_rectAttr(self):
         """for testing rect attr"""
         s1 = Square(5)
@@ -61,6 +104,8 @@ class test_square(unittest.TestCase):
             s1.size = "10"
         with self.assertRaises(ValueError):
             s1.size = 0
+        with self.assertRaises(ValueError):
+            s1.size = -1
 
     def test_update(self):
         """testing update"""
