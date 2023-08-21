@@ -54,6 +54,8 @@ class test_rectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 1, 1, 1, -1)
         r2 = Rectangle(10, 2, 0, 0, 12)
         with self.assertRaises(TypeError):
+            r5 = Rectangle(1)
+        with self.assertRaises(TypeError):
             r2.width = "10"
         with self.assertRaises(TypeError):
             r2.height = "10"
