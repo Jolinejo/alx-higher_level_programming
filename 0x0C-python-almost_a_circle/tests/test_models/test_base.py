@@ -40,6 +40,12 @@ class test_base(unittest.TestCase):
         self.assertDictEqual(from_js_dict[0], dictionary)
         self.assertEqual(json_dictionary2, "[]")
         self.assertEqual(json_dictionary3, "[]")
+        s1 = Square(5, 8, 9)
+        dictionary = s1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        from_js_dict = json.loads(json_dictionary)
+        self.assertTrue(type(json_dictionary) is str)
+        self.assertDictEqual(from_js_dict[0], dictionary)
 
     def test_SaveToFile(self):
         """file saving tests"""
