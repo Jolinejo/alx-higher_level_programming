@@ -106,6 +106,16 @@ class test_base(unittest.TestCase):
         json_list_input = Rectangle.to_json_string([])
         list_output = Rectangle.from_json_string(json_list_input)
         self.assertEqual(list_output, [])
+        json_list_input = Rectangle.to_json_string(None)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
+        r1 = Rectangle(6, 7)
+        json_list_input = r1.to_json_string([])
+        list_output = r1.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
+        json_list_input = r1.to_json_string(None)
+        list_output = r1.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
 
     def test_Create(self):
         """test create"""
