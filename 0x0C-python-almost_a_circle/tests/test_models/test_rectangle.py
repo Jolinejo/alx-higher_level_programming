@@ -158,6 +158,12 @@ class test_rectangle(unittest.TestCase):
         r1str = "[Rectangle] (89) 1/3 - 4/2"
         self.assertEqual(str(r1), r1str)
         self.assertFalse(hasattr(r1, "kilogram"))
+        r1.update(5, 6, 7, 8, 9, height=1, width=2, y=5, x=4)
+        r1str = "[Rectangle] (5) 8/9 - 6/7"
+        self.assertEqual(str(r1), r1str)
+        r1.update(8, height=1, width=2, y=5, x=4)
+        r1str = "[Rectangle] (8) 8/9 - 6/7"
+        self.assertEqual(str(r1), r1str)
 
     def test_ToDictionary(self):
         """testing dictionary"""
