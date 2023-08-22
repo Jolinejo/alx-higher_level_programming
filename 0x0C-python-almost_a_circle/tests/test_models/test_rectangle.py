@@ -20,7 +20,36 @@ class test_rectangle(unittest.TestCase):
     def test_inhert(self):
         """test inhertiance"""
         self.assertTrue(isinstance(Rectangle(1, 2), Base))
-        
+
+    def test_SaveToFile(self):
+        """file saving tests"""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        path = pl.Path("Rectangle.json")
+        assert path.is_file()
+        list_dict = list()
+        with open("Rectangle.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertDictEqual(list_dict[0], r1.to_dictionary())
+        self.assertDictEqual(list_dict[1], r2.to_dictionary())
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+
     def test_Instance(self):
         """testing the instance"""
         r1 = Rectangle(10, 2)
