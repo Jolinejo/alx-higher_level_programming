@@ -64,6 +64,9 @@ class test_square(unittest.TestCase):
         s1 = Square(5)
         s2 = Square(2, 2)
         s3 = Square(3, 1, 3)
+        s4 = Square(3, 1, 3, 4)
+        s4str = "[Square] (4) 1/3 - 3"
+        self.assertEqual(str(s4), s4str)
         s1str = "[Square] (1) 0/0 - 5"
         s2str = "[Square] (2) 2/0 - 2"
         s3str = "[Square] (3) 1/3 - 3"
@@ -89,6 +92,11 @@ class test_square(unittest.TestCase):
         s3.display()
         self.assertEqual(dis3, output.getvalue())
         sys.stdout = sys.__stdout__
+
+    def test_square_save_to(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            list_dict = json.load(f)
 
     def test_size(self):
         """testing size setter and getter"""
