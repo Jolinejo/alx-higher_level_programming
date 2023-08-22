@@ -50,6 +50,12 @@ class test_rectangle(unittest.TestCase):
             list_dict = json.load(f)
         self.assertEqual(list_dict, [])
 
+    def test_save_to_file_None(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            list_dict = json.load(f)
+        self.assertEqual(list_dict, [])
+
     def test_Instance(self):
         """testing the instance"""
         r1 = Rectangle(10, 2)
