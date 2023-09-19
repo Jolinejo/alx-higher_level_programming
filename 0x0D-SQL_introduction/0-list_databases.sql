@@ -1,0 +1,2 @@
+-- checking databases
+show databases;
