@@ -1,11 +1,8 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let fl = false;
-for (let i = 2; i < 3; i++) {
-  console.log(args[i]);
-  fl = true;
-}
-if (!fl) {
+if (args[2]) {
+  console.log(args[2]);
+} else {
   console.log('No argument');
 }
