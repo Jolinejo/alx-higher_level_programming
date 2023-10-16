@@ -6,5 +6,5 @@ const c2 = parseInt(c1, 10);
 if (c2) {
   console.log('My number: ' + c2);
 } else {
-  console.log(c2);
+  console.log('Not a number');
 }
