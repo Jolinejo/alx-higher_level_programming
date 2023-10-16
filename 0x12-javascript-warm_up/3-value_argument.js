@@ -1,13 +1,11 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let fl = 0;
-args.forEach((val, index) => {
-  if (index > 1) {
-    console.log(val);
-    fl = 1;
-  }
-});
-if (fl === 0) {
+let fl = false;
+for (let i = 2; args[i]; i++) {
+    console.log(args[i]);
+    fl = true;
+}
+if (!fl) {
   console.log('No argument');
 }
