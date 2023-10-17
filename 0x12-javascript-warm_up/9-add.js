@@ -1,6 +1,6 @@
 #!/usr/bin/node
-function add(a, b) {
-  return (a + b)
+function add (a, b) {
+  return (a + b);
 }
 const args = process.argv;
 const c1 = args[2] ? args[2] : 'NaN';
