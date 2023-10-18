@@ -9,7 +9,10 @@ if (!c2) {
 } else if (!c4) {
   console.log(0);
 } else {
-  const newarr = args.slice(2, args.length);
-  newarr.sort();
+  const newarr = [];
+  for (let i = 2; i < args.length; i++) {
+    newarr.push(parseInt(args[i], 10));
+  }
+  newarr.sort((a, b) => a - b);
   console.log(newarr[newarr.length - 2]);
 }
