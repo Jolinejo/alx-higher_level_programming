@@ -18,7 +18,8 @@ def main():
     db_connection = MySQLdb.connect(host=host, user=name, port=port,
                                     password=pwd, database=db)
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%';")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' \
+            ORDER BY states.id ASC;")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
