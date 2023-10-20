@@ -16,6 +16,6 @@ if __name__ == "__main__":
     engine = create_engine(query, pool_pre_ping=True)
     session = Session(engine)
     for state in session.query(State) \
-            .order_by(State.id).filter(State.name.contains('a')):
+            .order_by(State.id).filter(State.name.contains('a')).all():
         session.delete(state)
-        session.commit()
+    session.commit()
