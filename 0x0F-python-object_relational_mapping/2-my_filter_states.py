@@ -19,7 +19,7 @@ def main():
     db_connection = MySQLdb.connect(host=host, user=name, port=port,
                                     password=pwd, database=db)
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}' \
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' \
             ORDER BY states.id ASC;".format(tgt))
     rows = cursor.fetchall()
     for row in rows:
