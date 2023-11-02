@@ -7,12 +7,12 @@ def find_peak(list_of_integers):
     if list_of_integers == [] or len(list_of_integers) == 0:
         return None
     nums = list_of_integers
-    l = 0
+    left = 0
     r = len(nums) - 1
-    while (l < r):
+    while (left < r):
         mid = (l + r) // 2
         if nums[mid] < nums[mid+1]:
-            l = mid + 1
+            left = mid + 1
         else:
             r = mid
-    return nums[l]
+    return nums[left]
