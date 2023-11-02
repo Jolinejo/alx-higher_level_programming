@@ -1,3 +1,3 @@
 #!/bin/bash
 #outputcode 200
-curl -X DELETE $1
+curl -LX DELETE $1
