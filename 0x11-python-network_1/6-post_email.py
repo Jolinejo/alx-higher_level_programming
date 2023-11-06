@@ -2,7 +2,7 @@
 """module to fetch URL"""
 
 if __name__ == "__main__":
-    import requests 
+    import requests
     import sys
     email = sys.argv[2]
     data = {}
