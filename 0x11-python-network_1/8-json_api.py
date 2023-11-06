@@ -13,9 +13,8 @@ if __name__ == "__main__":
     try:
         dictti = r.json()
         if len(dictti) != 0:
-            print("[{}]: {}".format(dictti["id"], dictti["name"]))
+            print("[{}] {}".format(dictti["id"], dictti["name"]))
         else:
             print("No result")
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
-
